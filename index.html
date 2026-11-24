@@ -1,10 +1,18 @@
 <!DOCTYPE html>
+<!--
+  Derechos de autor: © 2026 Pedro Nequiz.
+  Cuaderno de Estadística 1 · Aula Digital.
+  Material didáctico y código de esta página protegidos por la legislación aplicable.
+  Se permite su uso con fines educativos y de consulta; para reproducción,
+  distribución o adaptación, solicitar autorización al autor.
+-->
+
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cuaderno de Estadística 1 · Aula Digital</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script type="text/javascript" nonce="b9e92c5036b44426b85a11dfde4" src="//local.adguard.org?ts=1795558762977&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_00000000293881f5a6ff183bb8416d76%26fn%3Dindex_actualizado.html%26cd%3Dattachment%26ts%3D498766%26p%3Dfs%26cid%3D1%26sig%3Dfbeedf926fec5ddb9cf882135bafeac5171e47bff12769ff0890a5ba4787e3a9%26v%3D0&amp;app=chrome.exe&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script><script type="text/javascript" nonce="b9e92c5036b44426b85a11dfde4" src="//local.adguard.org?ts=1795558762977&amp;name=AdGuard%20Extra&amp;name=AdGuard%20Popup%20Blocker&amp;type=user-script"></script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" rel="stylesheet">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
@@ -358,6 +366,19 @@ body.limpio .pn.violet{border-left:4px solid #7C5CF0}
 body.limpio .rail-search{display:block}
 @media (max-width:1000px){.rail-search{display:block}}
 @media (max-width:640px){.gsearch{display:none}.rail-search .gsearch{display:block}.gsearch-btn{display:inline-flex}}
+
+/* ---------- autoría y contacto ---------- */
+.rail-contact{padding:12px 10px 4px;border-top:1px solid #ffffff1f;color:#cfdad2;font-size:.78rem;line-height:1.5}
+.rail-contact strong{display:block;color:var(--sage);font-family:var(--f-head);font-size:.76rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:4px}
+.rail-contact a{color:#fff;text-decoration:none;overflow-wrap:anywhere}
+.rail-contact a:hover{text-decoration:underline;color:var(--sage)}
+.cover-contact{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:22px;padding:14px 18px;background:#f3f7ef;border:1.5px solid var(--line);border-left:4px solid var(--leaf);border-radius:12px}
+.cover-contact p{margin:0}
+.cover-contact a{font-weight:600;text-decoration:none;overflow-wrap:anywhere}
+.cover-contact a:hover{text-decoration:underline}
+.cover-contact small{color:var(--muted)}
+@media(max-width:640px){.cover-contact{align-items:flex-start;flex-direction:column}}
+
 </style>
 </head>
 <body>
@@ -375,6 +396,12 @@ body.limpio .rail-search{display:block}
       <button class="btn sm" data-act="apendice">📊 Apéndice</button>
       <button class="btn sm" data-act="reset">♻️ Borrar mi avance</button>
       <a class="btn sm" href="index.html">← Aula Digital <span class="sub">(si abres este archivo solo, puede no existir)</span></a>
+      <div class="rail-contact">
+        <strong>Autor y contacto</strong>
+        <span>Pedro Nequiz</span><br>
+        <a href="mailto:pedro.nequizmedina@cch.unam.mx">pedro.nequizmedina@cch.unam.mx</a>
+        <small>© 2026 · Material didáctico</small>
+      </div>
     </div>
   </aside>
   <div class="scrim" id="scrim"></div>
@@ -1969,7 +1996,11 @@ ${DATOS_X}
 </ul></div>
 <h2 class="rv" style="margin:26px 0 12px">Ruta de aprendizaje</h2>
       <div class="grid3">${units.map((u, i) => `<article class="pn unitcard rv ${u.c}" data-u="${u.u}" data-act="nav" data-id="${u.go}"><span class="big">${u.n}</span><h3><span class="ico">${u.ic}</span>Unidad ${u.n}</h3><p><b>${u.t}</b></p><p class="sub">${u.d}</p><div class="mini-prog"><i></i></div><small class="cnt sub"></small><button class="btn sm" data-act="prof" data-u="${u.u}" style="margin-top:8px">🔎 Profundización U${u.n}</button></article>`).join('')}</div>
-      <div class="pn rv" style="margin-top:22px"><h3><span class="ico">🗺️</span>Mapa de páginas</h3><div class="grid3" style="gap:10px">${PAGES.filter(x => x.id !== 'inicio').map(x => `<button class="btn" style="justify-content:flex-start" data-act="nav" data-id="${x.id}"><span>${x.ic}</span>${x.t}</button>`).join('')}</div></div>`;
+      <div class="pn rv" style="margin-top:22px"><h3><span class="ico">🗺️</span>Mapa de páginas</h3><div class="grid3" style="gap:10px">${PAGES.filter(x => x.id !== 'inicio').map(x => `<button class="btn" style="justify-content:flex-start" data-act="nav" data-id="${x.id}"><span>${x.ic}</span>${x.t}</button>`).join('')}</div></div>
+       <div class="cover-contact rv">
+         <div><p><b>Cuaderno de Estadística 1</b> · Material didáctico</p><small>Autor: Pedro Nequiz · © 2026</small></div>
+         <div><small>Contacto académico</small><br><a href="mailto:pedro.nequizmedina@cch.unam.mx">pedro.nequizmedina@cch.unam.mx</a></div>
+       </div>`;
       // gráfico animado de portada
       const f = [2, 4, 7, 11, 15, 17, 14, 10, 6, 3], labs = ['50', '55', '60', '65', '70', '75', '80', '85', '90', '95'];
       const W = 420, H = 200, mL = 48, mR = 14, mT = 18, mB = 44, ax = niceAxis(0, Math.max(...f)), yy = lin(ax.lo, ax.hi, H - mB, mT), bw = (W - mL - mR) / f.length;
